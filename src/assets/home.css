@@ -1,0 +1,80 @@
+.header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    .header-text{
+        h1{
+            color: #98FAEC;
+            font-size: 117px;
+            text-align: center;
+        }
+    }
+    .header-info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.profile-container{
+    border: 1px solid white;
+    width: 320px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Mono", serif;
+
+    .profile-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        color: white;
+      
+        h6{
+            font-size: 32px;
+        }
+        p{
+          font-size: 14px;
+        }
+    }
+    
+}
+.profile-details{
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-family: "IBM Plex Mono", serif;
+
+        
+        li{
+            list-style: none;
+            gap: 10px;
+            display: flex;
+            a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+ .profile-actions{
+    background: white;
+    width: 227px ;
+    height: 56px;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        font-size: 20px;
+        display: flex;
+        color: #292F36;
+        gap: 16px;
+    }
+ }
+}

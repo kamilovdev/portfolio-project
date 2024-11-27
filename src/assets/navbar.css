@@ -1,0 +1,39 @@
+.wrapper{
+  
+    .nav-container{
+        font-family: "IBM Plex Mono", serif;
+        nav{
+            padding: 0px 128px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #292F36;
+            height: 170px;
+            color: white;
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 32px;
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                a:hover{
+                    color: #12F7D6;
+                    transition: 0.5s;
+                }
+            }
+            h1{
+                font-size: 28px;
+                font-weight: 400;
+            }
+
+        }
+    }
+}
