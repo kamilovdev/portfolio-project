@@ -1,22 +1,29 @@
-.header-container{
+.header-container {
     display: flex;
     flex-direction: column;
     gap: 64px;
-    .header-text{
-        h1{
+    padding-top: 64px;
+
+    .header-text {
+        h1 {
             color: #98FAEC;
             font-size: 117px;
             text-align: center;
         }
     }
-    .header-info{
+
+    .header-info {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
 }
-.profile-container{
-    border: 1px solid white;
+
+.profile-container {
+    border: 4px solid white;
+    border-radius: 160px 0px 160px 0px;
+    border-left-color: #12F7D6;
+    border-top-color: #12F7D6;
     width: 320px;
     height: 520px;
     display: flex;
@@ -26,7 +33,7 @@
     align-items: center;
     font-family: "IBM Plex Mono", serif;
 
-    .profile-header{
+    .profile-header {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,47 +41,242 @@
         text-align: center;
         gap: 16px;
         color: white;
-      
-        h6{
+
+        h6 {
             font-size: 32px;
+            font-weight: 300;
         }
-        p{
-          font-size: 14px;
+
+        p {
+            font-size: 14px;
         }
     }
-    
+
 }
-.profile-details{
-    ul{
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    ul {
         display: flex;
         flex-direction: column;
         gap: 16px;
         font-family: "IBM Plex Mono", serif;
 
-        
-        li{
+
+        li {
             list-style: none;
             gap: 10px;
             display: flex;
-            a{
+
+            a {
                 color: white;
                 text-decoration: none;
             }
         }
     }
- .profile-actions{
-    background: white;
-    width: 227px ;
-    height: 56px;
-    border-radius: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    a{
-        font-size: 20px;
+
+    .profile-actions {
+        background: white;
+        width: 227px;
+        height: 56px;
+        border-radius: 32px;
         display: flex;
-        color: #292F36;
-        gap: 16px;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            font-size: 20px;
+            display: flex;
+            color: #292F36;
+            gap: 16px;
+            text-decoration: none;
+        }
     }
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .intro-text {
+        font-family: "Ubuntu", sans-serif;
+
+        h1 {
+            font-weight: 300;
+            font-size: 64px;
+            color: white;
+
+            span {
+                color: #12F7D6;
+            }
+        }
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        font-family: "IBM Plex Mono", serif;
+
+        p {
+            font-weight: 300;
+            font-size: 16px;
+            color: white;
+            opacity: 90%;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-family: "IBM Plex Mono", serif;
+            font-size: 32px;
+            color: #12F7D6;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+.intro-container{
+    display: flex;
+    gap: 24px;
+}
+@media screen and (max-width: 1280px) {
+   .header-info{
+    display: flex;
+    flex-direction: column;
+    gap: 82px;
+   }
+   .about-container{
+    .about-header{
+        .about-info{
+            width: 500px;
+        }
+    }
+   }
+}
+@media screen and (max-width: 948px) {
+    .about-container{
+        .about-header{
+            .about-info{
+                width: 600px;
+            }
+        }
+       }
+}
+@media screen and (max-width: 768px) {
+     .header-text{
+        display: none;
+     }
+    .header-info{
+     display: flex;
+     flex-direction: column;
+     gap: 82px;
+    }
+    .intro-container{
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        .info-img{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .about-container{
+     display: none;
+       }
  }
+ @media screen and (max-width: 390px) {
+    .about-container{
+        display: flex;
+        flex-direction: column;
+
+        .about-scroll{
+            display: none !important;
+        }
+        .about-header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+            .about-btn{
+                width: 224px;
+                height: 68px;
+                h1{
+                    font-size: 32px;
+                }
+            }
+            .about-info{
+                width: 344px;
+                padding: 58px 14px;
+            }
+        }
+          }
+ }
+
+.about-section{
+    background: #1A1E23;
+
+    .about-container{
+        padding: 128px 128px;
+        margin: 0 auto;
+    }
+    .about-scroll{
+        display: flex;
+        justify-content: center;
+    }
+    .about-header{
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+    .about-btn{
+        background: #292F36;
+        border: 4px solid #12F7D6;
+        border-radius: 40px 0px 40px 0px;
+        width: 367px;
+        height: 104px;
+        font-family: "Ubuntu", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       h1{
+        font-size: 64px;
+        font-weight: 400;
+        color: white;
+       
+    }
+    }
+    .about-info{
+        padding: 58px 40px;
+        background-color: #292F36;
+        width: 880px;
+        border-radius: 40px;
+        font-family: "IBM Plex Mono", serif;
+        
+        h1{
+            color: #12F7D6;
+            font-size: 32px;
+            font-weight: 400;
+        }
+        span{
+            p{
+                color: white;
+                font-weight: 300;
+
+                span{
+                    color: #12F7D6;
+                }
+            }
+
+        }
+    }
 }

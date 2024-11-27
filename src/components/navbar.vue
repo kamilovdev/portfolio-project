@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="nav-container">
                 <nav>
-                    <h1>Amirbek Kamilov</h1>
+                    <h1>Amirbek <span></span></h1>
 
                 <ul>
                     <RouterLink to="/">Home</RouterLink>
