@@ -161,6 +161,21 @@
         }
     }
    }
+   .language-container{
+     display: flex;
+     gap: 100px !important;
+
+     .tailwind-html{
+        display: flex;
+        gap: 100px !important;
+   
+     }
+     .js-vue{
+        display: flex;
+        gap: 100px !important;
+   
+     }
+   }
 }
 @media screen and (max-width: 948px) {
     .about-container{
@@ -170,6 +185,21 @@
             }
         }
        }
+    .language-container{
+        display: flex;
+        gap: 40px !important;
+
+        .tailwind-html{
+            display: flex;
+            gap: 40px !important;
+       
+         }
+         .js-vue{
+            display: flex;
+            gap: 40px !important;
+       
+         }
+      }
 }
 @media screen and (max-width: 768px) {
      .header-text{
@@ -193,6 +223,12 @@
     .about-container{
      display: none;
        }
+       .language-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       }
  }
  @media screen and (max-width: 390px) {
     .about-container{
@@ -215,12 +251,22 @@
                 }
             }
             .about-info{
-                width: 344px;
+                width: 304px;
                 padding: 58px 14px;
             }
         }
           }
- }
+         
+    }
+    @media screen and (max-width: 550px){
+        .feature-details{
+               display: none !important;
+      
+            }
+            .feature-icon{
+                display: none ;
+             }
+}
 
 .about-section{
     background: #1A1E23;
@@ -277,6 +323,123 @@
                 }
             }
 
+        }
+    }
+}
+.features-section{
+    background: #292F36;
+ 
+    .features-container{
+        padding: 128px 128px;
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+    }
+    .feature-card{
+        display: flex;
+        justify-content: center;
+    }
+    .feature-image{
+      display: flex;
+      justify-content: center;
+    }
+    .feature-details{
+        width: 288px;
+        height: 132px;
+        background: #12F7D6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "IBM Plex Mono", serif;
+        color: #292F36;
+        border-radius: 0px 8px 8px 0px  ;
+        
+        p{
+            font-size: 24px;
+            text-align: center;
+        }
+        
+    }
+    .tailwind{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: fit-content; 
+   
+        .tailwind-img{
+            background: white;
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 50px;
+        }
+        h1{
+            text-align: center;
+            color: #0C73B8;
+        }
+    }
+    .html{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: fit-content;
+        h1{
+            text-align: center;
+            color: #E54F26;
+        }
+    }
+    .js{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: fit-content;
+
+        h1{
+            text-align: center;
+            color: #E7A020;
+        }
+    }
+    .vue{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: fit-content;
+        .vue-img{
+            background: white;
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 50px;
+        }
+        h1{
+            text-align: center;
+            color: #41B883;
+        }
+    }
+    .language-container{
+        display: flex;
+        justify-content: center;
+        gap: 128px;
+
+        .tailwind-html{
+            display: flex;
+            gap: 128px;
+        }
+
+        .js-vue{
+            display: flex;
+            gap: 128px;
         }
     }
 }
