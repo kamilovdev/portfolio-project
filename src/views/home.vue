@@ -140,7 +140,7 @@
           
            <div class="js">
             <div>
-              <img src="../../public/home/Js.png" alt="">
+              <img src="../../public/home/Jss.png" alt="">
             </div>
             <h1>JS</h1>
            </div>
