@@ -103,6 +103,17 @@
         <div class="feature-image">
           <img src="../../public/home/Scroll.svg" alt="Scroll Icon" class="scroll-icon">
         </div>
+        <div class="skills-content">
+          <div class="skills-header">
+            <h1 class="skills-title">Works</h1>
+            <span class="skills-highlight">
+              <img src="../../public/home/green.svg" alt="Highlight Icon">
+            </span>
+            <p class="skills-description">
+              I had the pleasure of working with these awesome projects
+            </p>
+          </div>
+        </div>
         <div class="feature-content">
           <div class="feature-card">
             <span class="feature-icon">

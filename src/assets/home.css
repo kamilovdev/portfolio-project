@@ -104,6 +104,9 @@
 
     .intro-text {
         font-family: "Ubuntu", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h1 {
             font-weight: 300;
@@ -241,6 +244,7 @@
             display: flex;
             justify-content: center;
         }
+      
     }
     .about-container{
      display: none;
@@ -281,6 +285,9 @@
        .contact-container{
         padding: 128px 24px !important;
            
+       }
+       .skills-content{
+        display: flex !important;
        }
  }
  @media screen and (max-width: 395px) {
@@ -494,6 +501,35 @@
             text-align: center;
         }
         
+    }
+    .skills-content{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .skills-header{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        h1{
+            font-size: 64px;
+            color: #12F7D6;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300;
+        }
+        p{
+            font-size: 14px;
+            font-family: "IBM Plex Mono", serif;
+            color: white;
+            opacity: 80%;
+            text-align: center;
+        }
+        .skills-highlight{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
     .tailwind{
         display: flex;

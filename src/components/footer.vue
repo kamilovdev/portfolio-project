@@ -18,7 +18,7 @@
                 </span>
                 <span>
                  <p>Design By
-                 <span>JohannLeon</span>
+                 <span><a href="https://t.me/the_kamilov">Amirbek Kamilov</a></span>
                   </p>
                 </span>
             </div>
