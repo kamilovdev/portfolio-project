@@ -176,6 +176,18 @@
    
      }
    }
+   form{
+    .form-name-email{
+        input{
+            width: 176px !important;
+        }
+    }
+    .form-message{
+        input{
+            width: 480px !important;
+        }
+    }
+   }
 }
 @media screen and (max-width: 948px) {
     .about-container{
@@ -239,8 +251,11 @@
         justify-content: center;
         align-items: center;
         padding: 0px 24px !important;
-
-       }
+ 
+    }
+    .feature-image{
+        display: none !important;
+      }
        .works-cta{
         img{
             width: 349px !important;
@@ -259,6 +274,13 @@
        }
        .works-container{
         padding: 128px 24px !important;
+       }
+       .scroll-indicator{
+        display: none !important;
+       }
+       .contact-container{
+        padding: 128px 24px !important;
+           
        }
  }
  @media screen and (max-width: 395px) {
@@ -297,7 +319,8 @@
                 font-size: 15px !important;
             }
            }
-           
+      
+      
     }
     @media screen and (max-width: 350px){
         .blogs-btn{
@@ -352,6 +375,30 @@
                     max-width: 550px !important;
                 }
             } 
+            .send-content{
+                .send-btn{
+                   width: 325px !important;
+                   height: 64px !important;
+                  button{
+                    font-size: 24px;
+                  }
+                }
+                .form-name-email{
+                    display: flex !important;
+                    gap: 24px !important;
+                    justify-content: center;
+                  
+                    input{
+                        width: 135px !important;
+                    }
+                }
+             
+                .form-message{
+                    input{
+                        width: 294px !important;
+                    }
+                }
+            }    
 
 }
 
@@ -690,6 +737,7 @@
                 font-weight: 300;
                 color: #292F36;
                 border-radius: 32px;
+                border-color: #12F7D6;
             }
             .sub-btn{
                 background: transparent;
@@ -702,3 +750,129 @@
             }
         }
     }
+.contact-section{
+    background: #1A1E23;
+
+    .contact-container{
+        padding: 128px 128px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+
+        .scroll-indicator{
+            display: flex;
+            justify-content: center;
+        }
+        .contact-content{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 64px;
+ 
+         .contact-header{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+         }   
+            h1{
+                font-family: "Ubuntu", sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+                color: #12F7D6;
+            }
+            p{ 
+                font-family: "Ubuntu", sans-serif;
+                color: white;
+                font-size: 16px;
+                opacity: 80%;
+                font-weight: 400;
+            }
+        }
+    }
+    .send-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 64px;
+        .send-btn{
+            width: 407px;
+            height: 74px;
+            border: 2px solid #12F7D6;
+            border-radius: 32px 0px 32px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h1{
+                font-size: 32px;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+            .form-name-email{
+              display: flex;
+              gap: 128px;
+              text-align: start;
+            
+              label{
+                font-family: "Ubuntu", sans-serif;
+                font-weight: 300;
+                color: #12F7D6;
+                font-size: 16px;
+              }
+
+              input{
+                background: transparent;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid #12F7D6;
+                width: 496px;
+                height: 26px;
+                outline: none;
+                color: white;
+              }
+            }
+        }
+        .form-message{
+            display: flex;
+            text-align: start;
+            label{
+                font-family: "Ubuntu", sans-serif;
+                font-weight: 300;
+                color: #12F7D6;
+                font-size: 16px;
+              }
+
+              input{
+                background: transparent;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                border-bottom: 1px solid #12F7D6;
+                width: 1120px;
+                height: 26px;
+                outline: none;
+                color: white;
+              }
+        }
+        .contact-btn{
+            button{
+                display: flex;
+                gap: 16px;
+                padding: 16px 32px;
+                border-radius: 32px;
+                border: 1px solid #12F7D6;
+                background: #12F7D6;
+                font-family: "Ubuntu", sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+            }
+        }
+    }
+}
+button{
+    cursor: pointer;
+}

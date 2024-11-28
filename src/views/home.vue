@@ -1,6 +1,4 @@
-<script setup>
- import { RouterLink } from 'vue-router';
-</script>
+
 <template>
   <div class="wrapper">
     <header>
@@ -235,9 +233,156 @@
         </div>
       </div>
     </section>
+
+    <section class="contact-section">
+        <div class="contact-container">
+          <div class="scroll-indicator">
+          <img src="../../public/home/Scroll.svg" alt="Scroll Indicator">
+          </div>
+
+          <div class="contact-content"> 
+            <div class="contact-header"> 
+            <h1>Contact</h1>
+            <span>
+              <img src="../../public/home/green.svg" alt="Highlight Icon">
+            </span>
+            <p>
+              I’m currently available for freelance work
+            </p>
+          </div>
+
+          <div class="send-content">
+             <div class="send-btn">
+              <h1>Send me a message</h1>
+             </div>
+
+             <form>
+                <div class="form-name-email">
+                <span class="form-name">
+                  <label for="name">Your name *</label><br><br>
+                  <input v-model="firstName" type="text" id="firstName" :class="{ 'error-border': loginError }" placeholder="Enter your name">
+                </span>
+
+                <span class="form-email">
+                  <label for="email">Your email *</label><br><br>
+                  <input v-model="email" id="lastName" type="email" :class="{ 'error-border': loginError }"  placeholder="Enter your email">
+                </span>
+                </div>
+
+                <div class="form-message">
+                  <span>
+                    <label for="message">Your message *</label><br><br>
+                    <input v-model="messange" id="number" type="text" :class="{ 'error-border': loginError }" placeholder="Enter your needs">
+                  </span>
+                </div>
+             </form>
+
+             <div class="contact-btn">
+              <button  @click="sendMessage" :disabled="submitted || loading" >Send Message  <i class="fa-regular fa-paper-plane"></i></button>
+             </div>
+          </div>
+          </div>
+        </div>  
+    </section>
+  
+  <Footer/>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+ import { RouterLink } from 'vue-router';
+ import Footer from '@/components/footer.vue';
+
+ import {
+    ref
+  } from 'vue'
+
+
+  const firstName = ref("");
+const email = ref(""); 
+const messange = ref("");
+const submitted = ref(false);
+const loading = ref(false); 
+let alertShown = false; // Track if alert has been shown
+
+const sendMessage = async () => {
+    // Validate inputs
+    if (!firstName.value || !email.value || !messange.value) {
+        highlightEmptyFields();
+        return; // Exit the function if validation fails
+    }
+
+    // Check if the email ends with '@gmail.com'
+    if (!email.value.endsWith('@gmail.com')) {
+        if (!alertShown) { // Show alert only if it hasn't been shown yet
+            alert('Iltimos, emailingizni "@gmail.com" bilan tugatishni unutmang.');
+            alertShown = true; // Set flag to true after showing the alert
+        }
+        return; // Exit if email is invalid
+    } else {
+        alertShown = false; // Reset the flag if email is valid
+    }
+
+    // Prevent further submissions
+    if (submitted.value || loading.value) return;
+
+    loading.value = true; // Set loading state to true
+    const TELEGRAM_BOT_TOKEN = "7590818828:AAEcOBzrWLe8IMw2rwZUWjNmIXPyEj7QbRM";
+    const CHAT_ID = "6755309533";
+
+    // Prepare the message
+    const message =
+        `Yangi foydalanuvchi royhatdan o'tdi:\nIsm: ${firstName.value}\nEmail: ${email.value}\nSizga xabar qoldirdi: ${messange.value}`;
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.ok) {
+            console.log("Ro'yhatdan muvaffaqiyatli o'tdingiz");
+            firstName.value = "";
+            email.value = ""; 
+            messange.value = "";
+            submitted.value = true; 
+        } else {
+            console.log("Malumotlarni yuborishda xatolik");
+        }
+    } catch (error) {
+        console.log("Xatolik yuz berdi");
+        console.error("Error:", error);
+    } finally {
+        loading.value = false; 
+    }
+};
+
+const highlightEmptyFields = () => {
+    const fields = [
+        { ref: firstName, name: 'firstName' },
+        { ref: email, name: 'email' },
+        { ref: messange, name: 'messange' }
+    ];
+
+    fields.forEach(({ ref, name }) => {
+        const field = document.querySelector(`input[name="${name}"]`);
+        if (!ref.value) {
+            field.style.borderColor = 'red';
+        } else {
+            field.style.borderColor = ''; 
+        }
+    });
+};
+
+const inputFieldNames = ['firstName', 'email', 'messange']; 
+inputFieldNames.forEach(name => {
+    const field = document.querySelector(`input[name="${name}"]`);
+    if (field) { 
+        field.addEventListener('focus', () => {
+            field.style.borderColor = ''; 
+        });
+    }
+});
+
+</script>
 
 <style scoped></style>
