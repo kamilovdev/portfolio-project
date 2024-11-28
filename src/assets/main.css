@@ -10,7 +10,9 @@
    max-width: 1920px;
 }
 header{
-    background: #292F36;
+background: #292F36;
+}
+.header-container{
     .header-container{
         padding: 28.5px 128px;
     }

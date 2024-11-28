@@ -200,6 +200,16 @@
        
          }
       }
+       .works-cta{
+        img{
+            width: 549px !important;
+        }
+       }
+       .works-href{
+        a{
+            font-size: 18px !important;
+        }
+       }
 }
 @media screen and (max-width: 768px) {
      .header-text{
@@ -228,9 +238,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0px 24px !important;
+
+       }
+       .works-cta{
+        img{
+            width: 349px !important;
+        }
+       }
+       .blogs-dev-content{
+      img{
+        width: 120px;
+      }
+       }
+       .header-container{
+        padding: 28.5px 74px !important;
+       }
+       .blogs-container{
+        padding: 128px 24px !important;
+       }
+       .works-container{
+        padding: 128px 24px !important;
        }
  }
- @media screen and (max-width: 390px) {
+ @media screen and (max-width: 395px) {
     .about-container{
         display: flex;
         flex-direction: column;
@@ -256,7 +287,24 @@
             }
         }
           }
-         
+          .works-href{
+            a{
+                font-size: 16px !important;
+            }
+           }
+           .blogs-btn{
+            button{
+                font-size: 15px !important;
+            }
+           }
+           
+    }
+    @media screen and (max-width: 350px){
+        .blogs-btn{
+            button{
+                font-size: 13px !important;
+            }
+           }
     }
     @media screen and (max-width: 550px){
         .feature-details{
@@ -266,6 +314,45 @@
             .feature-icon{
                 display: none ;
              }
+             .language-container{
+                   .html{
+                    img{
+                        width: 120px !important;
+                    }
+                   }
+                   .js{
+                    img{
+                        width: 120px !important;
+                    }
+                   }
+                   .tailwind{
+                     .tailwind-img{
+                        width: 120px !important;
+                        height: 120px !important; 
+                        
+                     }
+                   }
+                   .vue{
+                    .vue-img{
+                       width: 120px !important;
+                       height: 120px !important; 
+                       
+                    }
+                  }
+             }
+             .blogs-dev-content{
+                display: flex;
+                flex-direction: column;
+              
+              .blogs-img{
+                display: flex;
+                justify-content: center;
+              }  
+                .blogs-header{
+                    max-width: 550px !important;
+                }
+            } 
+
 }
 
 .about-section{
@@ -443,3 +530,174 @@
         }
     }
 }
+.works-section{
+    background: #1A1E23;
+    
+    .works-container{
+        padding: 128px 128px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        .scroll-indicator{
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: 32px;
+                height: 146px;
+            }
+        }
+        .works-content{
+            display: flex;
+             flex-direction: column;
+            justify-content: center;
+           align-items: center;
+
+           .works-header{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+            font-family: "IBM Plex Mono", serif;
+            
+            img{
+                width: 183px;
+            }
+            h1{
+                font-family: "Ubuntu", sans-serif;
+                font-size: 64px;
+                font-weight: 400;
+                color: #12F7D6;
+            }
+            p{
+                      color: white;
+                      font-size: 16px;
+                      opacity: 80%;
+            }
+           }
+           .works-href{
+            padding-top: 64px;
+            a{
+                color: #12F7D6;
+                font-size: 24px;
+                text-decoration: none;
+                font-family: "IBM Plex Mono", serif;
+                font-weight: 300;
+            }
+           }
+        }
+        img{
+            width: 649px;
+        }
+    }
+}
+.blogs-section{
+    background: #292F36;
+
+    .blogs-container{
+        padding: 128px 128px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .scroll-indicator{
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 32px;
+            height: 146px;
+        }
+    }
+
+    .blogs-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+         gap: 64px;    
+        .blogs-header{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 16px;
+            font-family: "IBM Plex Mono", serif;
+        }
+       
+            h1{
+                font-family: "Ubuntu", sans-serif;
+                font-size: 64px;
+                font-weight: 400;
+                color: #12F7D6;
+            }
+            p{
+                      color: white;
+                      font-size: 16px;
+                      opacity: 80%;
+            }
+        }
+        .blogs-hr{
+            display: flex;
+            justify-content: center;
+
+            hr{
+                width: 1052px;
+            }
+        }
+        .blogs-dev-content{
+            display: flex;
+            gap: 64px;
+            text-align: start;
+            justify-content: center;
+            padding: 0px 14px;
+            .blogs-dev-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                max-width: 720px;
+               h1{
+                font-family: "Ubuntu", sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+                color: #12F7D6;
+               }
+               p{
+                font-family: "Ubuntu", sans-serif;
+                color: white;
+                font-size: 16px;
+                opacity: 80%;
+                font-weight: 400;
+               }
+               a{
+                font-family: "Ubuntu", sans-serif;
+                color: #12F7D6;
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;
+               }
+            }
+        }
+        .blogs-btn{
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            button{
+                padding: 16px 32px;
+                background: #12F7D6;
+                font-size: 20px;
+                font-family: "Ubuntu", sans-serif;
+                font-weight: 300;
+                border-radius: 32px;
+            }
+            .sub-btn{
+                background: transparent;
+                border-color: #12F7D6;
+                font-size: 20px;
+                font-family: "Ubuntu", sans-serif;
+                font-weight: 300;
+                border-radius: 32px;
+                color: white;
+            }
+        }
+    }

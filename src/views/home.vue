@@ -1,3 +1,6 @@
+<script setup>
+ import { RouterLink } from 'vue-router';
+</script>
 <template>
   <div class="wrapper">
     <header>
@@ -46,7 +49,7 @@
               <span class="intro-text">
                 <h1 class="greeting">Hey</h1>
                 <h1 class="name">I’m <span>Amirbek</span>,</h1>
-                <h1 class="profession">Full-stack developer</h1>
+                <h1 class="profession">Front-End developer</h1>
               </span>
               <span class="about">
                 <p class="description">I help business grow by crafting amazing web experiences. If you’re <br> looking
@@ -104,9 +107,9 @@
         </div>
         <div class="feature-content">
           <div class="feature-card">
-          <span class="feature-icon">
-            <img src="../../public/home/Color.svg" alt="Feature Color"  >
-          </span>
+            <span class="feature-icon">
+              <img src="../../public/home/Color.svg" alt="Feature Color">
+            </span>
             <div class="feature-details">
               <span class="feature-icon-container">
                 <img src="../../public/home/komp.svg" alt="Development Icon" class="development-icon">
@@ -120,43 +123,118 @@
         </div>
 
         <div class="language-container">
-        <div class="tailwind-html">
-           <div class="html">
-               <div>
+          <div class="tailwind-html">
+            <div class="html">
+              <div>
                 <img src="../../public/home/html.png" alt="">
-               </div>
-                <h1>HTML</h1>
-           </div>
+              </div>
+              <h1>HTML</h1>
+            </div>
 
-           <div class="tailwind">
-              <div  class="tailwind-img">
+            <div class="tailwind">
+              <div class="tailwind-img">
                 <img src="../../public/home/tailwind.svg" alt="">
               </div>
               <h1>TailwindCSS</h1>
-           </div>
-        </div>
-
-        <div class="js-vue">
-          
-           <div class="js">
-            <div>
-              <img src="../../public/home/yellow.png" alt="">
             </div>
-            <h1>JS</h1>
-           </div>
+          </div>
 
-           <div class="vue">
-             <div class="vue-img">
-               <img src="../../public/home/vue.svg" alt="">
-             </div>
-             <h1>VUE</h1>
-           </div>
-        </div>
+          <div class="js-vue">
+
+            <div class="js">
+              <div>
+                <img src="../../public/home/yellow.png" alt="">
+              </div>
+              <h1>JS</h1>
+            </div>
+
+            <div class="vue">
+              <div class="vue-img">
+                <img src="../../public/home/vue.svg" alt="">
+              </div>
+              <h1>VUE</h1>
+            </div>
+          </div>
 
         </div>
       </div>
     </section>
 
+    <section class="works-section">
+      <div class="works-container">
+
+        <div class="scroll-indicator">
+          <img src="../../public/home/Scroll.svg" alt="Scroll Indicator">
+        </div>
+
+        <div class="works-content">
+          <div class="works-header">
+            <h1 class="works-title">Works</h1>
+            <span class="works-highlight">
+              <img src="../../public/home/green.svg" alt="Highlight Icon">
+            </span>
+            <p class="works-description">
+              I had the pleasure of working with these awesome projects
+            </p>
+          </div>
+
+          <div class="works-href">
+             <RouterLink to="/">view Website</RouterLink>
+          </div>
+
+          <div class="works-cta">
+            <span class="cta-icon">
+              <img src="../../public/home/Content.png" alt="Content Icon">
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="blogs-section">
+      <div class="blogs-container">
+        <div class="scroll-indicator">
+          <img src="../../public/home/Scroll.svg" alt="Scroll Indicator">
+        </div>
+
+        <div class="blogs-content">
+          <div class="blogs-header"> 
+            <h1>Blogs</h1>
+            <span>
+              <img src="../../public/home/green.svg" alt="Highlight Icon">
+            </span>
+            <p>
+              My thoughts on technology and business, welcome to subscribe
+            </p>
+          </div>
+
+          <span class="blogs-hr">
+          <hr>
+          </span>
+          <div class="blogs-dev-content">
+
+            <div class="blogs-img">
+              <img src="../../public/home/works.png" alt="">
+            </div>
+             
+            <div class="blogs-dev-header">
+              <h1>What does it take to become a web developer?</h1>
+              <p>Web development, also known as website development, encompasses a variety of tasks and processes involved in creating websites for the internet…</p>
+              <RouterLink to="/">Read More</RouterLink>
+            </div> 
+          </div>
+
+          <span class="blogs-hr">
+          <hr>
+          </span>
+
+          <div class="blogs-btn">
+            <button>View More</button>
+            <button class="sub-btn">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
