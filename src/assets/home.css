@@ -289,6 +289,11 @@
        .skills-content{
         display: flex !important;
        }
+       .footer-content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+       }
  }
  @media screen and (max-width: 395px) {
     .about-container{
@@ -406,7 +411,14 @@
                     }
                 }
             }    
-
+        footer{
+        height: auto !important;
+        padding-bottom: 10px !important;
+        }
+            .footer-content{
+            display: flex;
+            flex-direction: column;
+        }
 }
 
 .about-section{
@@ -448,7 +460,9 @@
         width: 880px;
         border-radius: 40px;
         font-family: "IBM Plex Mono", serif;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         h1{
             color: #12F7D6;
             font-size: 32px;
@@ -909,7 +923,34 @@
             }
         }
     }
+ hr{
+    opacity: 30%;
+ }
 }
 button{
     cursor: pointer;
+}
+
+footer{
+    margin-top: 20px;
+    height: 64px;
+    .footer-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        opacity: 60%;
+    }
+    .footer-img{
+        display: flex;
+        gap: 32px;
+    }
+    .privacy{
+        display: flex;
+        gap: 32px;
+    }
+a{
+    color: #12F7D6;
+    opacity: 100%;
+}
 }
