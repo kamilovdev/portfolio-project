@@ -1,5 +1,24 @@
 <template>
-    <h1>Blogs Page</h1>
+    <hr>
+    <div class="wrapper-blogs">
+        <header>
+            <div class="blogs-header">
+                <h1>Blogs</h1>
+                <span>
+                    <img src="../../public/home/green.svg" alt="">
+                </span>
+                <p>My thoughts on technology and business, welcome to subscribe</p>
+            </div>
+        </header>
+
+        <section>
+            <div class="blogs-header-btn">
+                <button>Subscribe My Blogs</button>
+            </div>
+
+            <h1>Projects will be announced soon ...</h1>
+        </section>
+    </div>
 </template>
 
 <script setup></script>
