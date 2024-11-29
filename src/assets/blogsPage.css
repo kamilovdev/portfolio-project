@@ -74,4 +74,11 @@ section{
         text-align: center;
     }
    }
+   .wrapper-blogs {
+    padding: 64px 24px !important;
+    height: auto;   
+}
+}
+@media screen and (max-width: 500px){
+
 }
