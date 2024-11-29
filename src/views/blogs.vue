@@ -13,7 +13,7 @@
 
         <section>
             <div class="blogs-header-btn">
-                <button>Subscribe My Blogs</button>
+                <router-link to="/sub">Subscribe My Blogs</router-link>>
             </div>
 
             <h1>Projects will be announced soon ...</h1>
