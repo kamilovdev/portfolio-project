@@ -46,7 +46,7 @@
         }
     }
 }
-section{
+.blogs-section{
     padding: 64px 0px;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,7 @@ section{
     }
 }
 @media screen and (max-width: 670px){
-   section{
+    .blogs-section{
     h1{
         display: flex;
         align-items: start;

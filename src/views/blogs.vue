@@ -11,9 +11,9 @@
             </div>
         </header>
 
-        <section>
+        <section class="blogs-section">
             <div class="blogs-header-btn">
-                <router-link to="/sub">Subscribe My Blogs</router-link>>
+                <router-link to="/subscripe">Subscribe My Blogs</router-link>>
             </div>
 
             <h1>Projects will be announced soon ...</h1>

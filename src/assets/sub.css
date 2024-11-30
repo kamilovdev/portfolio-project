@@ -1,0 +1,8 @@
+.sub-wrapper{
+    height: auto;
+    padding: 128px 128px;
+}
+.sub-header{
+    display: flex;
+    flex-direction: column;
+}
